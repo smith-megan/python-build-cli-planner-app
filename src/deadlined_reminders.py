@@ -3,6 +3,6 @@ from collections.abc import Iterable
 
 class DeadlinedMetaReminder(Iterable, ABCMeta):
   @abstractmethod
-  def is_due():
+  def is_due(self):
     pass
 
