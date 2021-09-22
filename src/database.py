@@ -21,10 +21,6 @@ def add_reminder(text, date, ReminderClass):
     if not isinstance(reminder, DeadlinedReminder):
         raise TypeError('Invalid Reminder Class')
 
-
-    # if not issubclass(ReminderClass, DeadlinedReminder):
-    #     raise TypeError('Invalid Reminder Class')
-
     with open('reminders.csv', 'a+', newline='\n') as file:
         writer = csv.writer(file)
         writer.writerow(reminder)
